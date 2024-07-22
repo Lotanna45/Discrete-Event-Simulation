@@ -2,15 +2,12 @@
 This program runs a Discrete Event Simulation that simulates short-term scheduling in an OS.
 
 AUTHORS: Lotanna Akukwe - lakukwe24@my.whitworth.edu
-Exam 2
-CS-475W Operating Systems
+Discrete Event Simulation Project
+CS Operating Systems
 */
 
-//#include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
-// #include <semaphore.h>
-// #include <unistd.h>
 #include <vector>
 #include <limits>
 #include <iostream>
@@ -21,7 +18,6 @@ CS-475W Operating Systems
 
 using namespace std;
 
-//10000ms = 10s
 int totalSimTime = 250;
 int currentTime;
 int count = 0;
@@ -32,7 +28,6 @@ int waitingAvg = 0;
 int responseAvg = 0;
 float cpuAvg = 0;
 int turnaroundT = 0;
-//int roundRobin2 = 40;
 int completeJob = 0;
 int CPU1Time = 0;
 int CPU2Time = 0;
