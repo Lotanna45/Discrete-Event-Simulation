@@ -17,6 +17,23 @@ The simulation tracks key metrics such as:
 - Calculates performance metrics for job scheduling.
 - Handles CPU bursts and I/O wait times effectively.
 
+## Key Algorithms and Data Structures
+### Algorithms
+- **Multi-Level Feedback Queue (MLFQ):**
+  - Dynamically adjusts process priorities based on their execution history.
+  - Uses preemption to ensure high-priority jobs get quick access to the CPU.
+- **Round Robin (RR):**
+  - Allocates fixed time slices (quantum) for each job.
+  - Ensures fair CPU distribution among processes.
+
+### Data Structures
+- **Future Event List (FEL):** A vector used to manage events sorted by timestamp.
+- **Ready Queues:** A vector of queues categorized by priority levels.
+- **Job List:** A vector storing all jobs with attributes such as arrival time, burst times, and priority.
+- **Hash Maps:**
+  - `quantumMap`: Stores quantum values for different priority levels.
+  - `processorJobMap`: Tracks jobs assigned to processors.
+
 ## Prerequisites
 To build and run the project, you need:
 - **C++ Compiler** (e.g., `g++`)
